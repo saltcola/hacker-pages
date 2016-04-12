@@ -9,3 +9,11 @@ Template.hackerList.helpers({
 		return Hackers.find();
 	}
 });
+
+Template.hackerList.helpers({
+	'createdByUser': function() {
+		return this.createdBy === Meteor.userId();
+	}
+});
+
+
